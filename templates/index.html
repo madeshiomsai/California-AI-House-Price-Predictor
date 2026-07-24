@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>California House Price Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🏠 California House Price Predictor</h1>
+
+    <p>
+        Enter the property details below
+    </p>
+
+    <form action="/predict" method="POST">
+
+        <input type="number" step="any"
+               placeholder="Median Income"
+               name="a" required>
+
+        <input type="number" step="any"
+               placeholder="House Age"
+               name="b" required>
+
+        <input type="number" step="any"
+               placeholder="Average Rooms"
+               name="c" required>
+
+        <input type="number" step="any"
+               placeholder="Average Bedrooms"
+               name="d" required>
+
+        <input type="number" step="any"
+               placeholder="Population"
+               name="e" required>
+
+        <input type="number" step="any"
+               placeholder="Average Occupancy"
+               name="f" required>
+
+        <button type="submit">
+            Predict Price
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
